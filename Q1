@@ -1,0 +1,24 @@
+SELECT * FROM tutorial.oscar_nominees 
+
+/* Get all actors who won the "actor" category */
+SELECT * FROM tutorial.oscar_nominees
+WHERE category = 'actor' AND winner = true;
+
+/* Get all nominees for leading actor or actress */
+SELECT * FROM tutorial.oscar_nominees
+WHERE category = 'actor in a leading role' OR category = 'actress in a leading role' 
+  
+/* Get all supporting role winners (male of female) */
+SELECT * FROM tutorial.oscar_nominees 
+WHERE (category = 'actress in a supporting role' OR category = 'actor in a supporting role')
+AND winner;
+
+/* Get all supporting role nomineers after year 2000 */
+SELECT * FROM tutorial.oscar_nominees 
+WHERE (category = 'actress in a supporting role' OR category = 'actor in a supporting role')
+AND year > 2000;
+
+/* Get all nominees that are not for "actor in leading role" */
+SELECT * FROM tutorial.oscar_nominees 
+WHERE NOT category = 'actor in a leading role';
+
