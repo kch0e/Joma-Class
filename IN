@@ -1,0 +1,4 @@
+/* Return all crimes that happened during a M,W,F */
+select * from tutorial.sf_crime_incidents_cleandate
+where day_of_week IN ('Monday', 'Wendesday' , 'Friday')
+order by random();
