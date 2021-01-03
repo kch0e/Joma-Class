@@ -1,0 +1,3 @@
+/* Return all users from Yammer that has activated_at as null */
+select * from tutorial.yammer_users
+where activated_at is NULL;
