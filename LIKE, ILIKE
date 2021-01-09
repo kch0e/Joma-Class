@@ -1,2 +1,0 @@
-/* Return crimes that are sexual in nature */
-select * from tutorial.sf_crime_incidents_cleandate where descript ILIKE '%Sex%'
